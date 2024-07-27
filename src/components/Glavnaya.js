@@ -4,10 +4,13 @@ import Slaider from './Slaider';
 import natal from '../Asserts/natal.jpg'
 import nadya from '../Asserts/nadya.jpg'
 import sveta from '../Asserts/sveta.jpg'
-import interOne from '../Asserts/interOne.jpg'
-import interTWO from '../Asserts/interTWO.jpg';
-import interTreee from '../Asserts/interTreee.jpg';
-import Price from './Price'
+import renderOne from '../Asserts/renderOne.jpg'
+import renderTwo from '../Asserts/renderTwo.jpg'
+import renderTr from '../Asserts/renderTr.jpg'
+import classOne from '../Asserts/classOne.jpg'
+import classTwo from '../Asserts/classTwo.jpg'
+import classTr from '../Asserts/classTr.jpg'
+import Price from '../components/Calculator/Price'
 import styled from 'styled-components';
 
 const Styles = styled.div `
@@ -40,51 +43,41 @@ export const Glavnaya = () => (
       <Row>
           <Col md={6} >
     <Carousel >
-        <Carousel.Item interval={1000} style={{'height': '400px'}} >
-          <img  src={ interOne } alt="komnata" text="First slide" />
+        <Carousel.Item interval={1000} style={{'height': '500px'}} >
+          <img  src={ renderOne } alt="komnata" text="First slide" />
           <Carousel.Caption>
-            <h3>Зал</h3>
-            <p></p>
           </Carousel.Caption>
         </Carousel.Item>
-        <Carousel.Item interval={500} style={{'height': '400px'}}>
-          <img src={ interTWO } alt="komnata" text="Second slide" />
+        <Carousel.Item interval={500} style={{'height': '500px'}}>
+          <img src={ renderTwo } alt="komnata" text="Second slide" />
           <Carousel.Caption>
-            <h3>Комната</h3>
-            <p></p>
           </Carousel.Caption>
         </Carousel.Item>
-        <Carousel.Item style={{'height': '400px'}}>
-          < img src= { interTreee }  alt="komnata" text="Third slide" />
+        <Carousel.Item style={{'height': '500px'}}>
+          < img src= { renderTr }  alt="komnata" text="Third slide" />
           <Carousel.Caption>
-            <h3>Кухня</h3>
-            <p></p>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
         </Col>
-
           <Col md={6}>
         <Carousel>
-    <Carousel.Item interval={1000} style={{'height': '400px'}}>
-          <img src={ interOne } alt="komnata" text="First slide" />
+
+
+
+    <Carousel.Item interval={1000} style={{'height': '500px'}}>
+          <img src={ classOne } alt="komnata" text="First slide" />
           <Carousel.Caption>
-            <h3>Зал</h3>
-            <p></p>
+            </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item interval={500} style={{'height': '500px'}}>
+          <img src={ classTwo } alt="komnata" text="Second slide" />
+          <Carousel.Caption>
           </Carousel.Caption>
         </Carousel.Item>
-        <Carousel.Item interval={500} style={{'height': '400px'}}>
-          <img src={ interTWO } alt="komnata" text="Second slide" />
+        <Carousel.Item style={{'height': '500px'}}>
+          < img src= { classTr }  alt="komnata" text="Third slide" />
           <Carousel.Caption>
-            <h3>Комната</h3>
-            <p></p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item style={{'height': '400px'}}>
-          < img src= { interTreee }  alt="komnata" text="Third slide" />
-          <Carousel.Caption>
-            <h3>Кухня</h3>
-            <p></p>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
