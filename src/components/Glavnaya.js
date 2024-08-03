@@ -12,6 +12,10 @@ import classTwo from '../Asserts/classTwo.jpg'
 import classTr from '../Asserts/classTr.jpg'
 import Price from '../components/Calculator/Price'
 import styled from 'styled-components';
+import ilona from '../Asserts/ilona.jpg';
+import pavel from '../Asserts/pavel.jpg'
+import ekater from '../Asserts/ekater.jpg'
+import zadnik from '../Asserts/zadnik.jpg'
 
 const Styles = styled.div `
 a {
@@ -94,7 +98,7 @@ export const Glavnaya = () => (
     <div class='container'>
 <div class='row'>
    <div style = {{width: '18rem'}}>
-   <Card.Img variant = 'top rounded-2' src={ natal }/>
+   <Card.Img variant = 'top rounded-2 '  src={ natal }/>
    </div>
    <div>
    <CardBody >
@@ -167,10 +171,10 @@ export const Glavnaya = () => (
 <Container class='pt-5' >
     <Container >
         <h3 class="text-center m-3"> Стоимость услуг </h3>
-    <Accordion>
+    <Accordion >
       <Accordion.Item eventKey="0" >
-        <Accordion.Header>Комплекс "Люкс" - от 160 000 ₽</Accordion.Header>
-        <Accordion.Body>
+        <Accordion.Header >Комплекс "Люкс" - от 160 000 ₽</Accordion.Header>
+        <Accordion.Body >
         <ul class="list-group list-group-flush">
   <li class="list-group-item">An item</li>
   <li class="list-group-item">A second item</li>
@@ -197,10 +201,30 @@ export const Glavnaya = () => (
     </Container>
 </Container>
 
-<Price />
+<Price/>
 
+<Container>
+<h3 class="text-center m-3"> Новые отзывы </h3>
+<div class="row pt-5 kraska">
+      <div class="col-lg-4 text-center">
+      <svg src= { ilona } class="bd-placeholder-img rounded-circle" width="140" height="140" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em"></text></svg>
+      <h4>Илона</h4>
+         <p>Недавно я имел удовольствие сотрудничать с дизайн бюро Status Projects. Дизайнеры внимательно выслушали мои идеи, предложили свои решения. Каждый этап сопровождался консультациями. Девочки были внимательны к деталям, всегда пунктуальны и вежливы, у них действительно индивидуальный подход к заказчику. Я рекомендую бюро Status Projects всем, кто ищет профессионалов. Спасибо вам и успехов в вашем нелегком труде!!!</p>
+            </div>
+      <div class="col-lg-4 text-center">
+      <svg src= { pavel } class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+        <h4>Павел</h4>
+        <p>Выбирали в какой студии заказать проект дома, и остановились на Status Projects. И вот уже заканчивается ремонт, и очень захотелось выразить благодарность дизайнерам Надежде, Светлане и их руководителю Катюше! Их дружная слаженная работа создает атмосферу доверия и заслуживает уважения. Всегда открыты и на связи. Я сама почувствовала себя не заказчиком, а партнером в процессе создания проекта. Все проконтролируют, и рабочих, и поставку материалов. Я была спокойна и не нервничала. Всем кто думает заказывать проект, однозначно советую Status Projects !👍🏼🔥</p>
+        </div>
+      <div class="col-lg-4 text-center">
+      <svg src= { ekater } class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+        <h4>Екатерина</h4>
+        <p>Мы купили квартиру и очень хотели, чтобы все члены семьи имели личное пространство, свой уголок и в то же время необходимо было одно общее место, для сбора всей семьи. Надежда разработала всевозможные варианты и в итоге мы получили спальню, две детские и большую гостиную, совмещённую с кухней и столовой. 
+Работать с Надеждой одно удовольствие, объясняет нюансы строительных работ и дизайнерских решений, внимательно относится к пожеланиям заказчика, а самое главное она может реализовать вашу мечту о прекрасном доме.
+</p>
+      </div>
+    </div>
 
-
-
+</Container>
     </>
 )

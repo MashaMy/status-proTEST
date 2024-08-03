@@ -1,6 +1,6 @@
-import { useState, useReducer } from 'react';
+import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Modal, ModalBody, Form, FormGroup, FormLabel, FormControl, FormText, FormCheck } from 'react-bootstrap';
+import { FormGroup, FormCheck } from 'react-bootstrap';
 import { dataPlus } from './dataPlus';
 
 
@@ -13,92 +13,61 @@ function Price() {
     };
 
 
-    const [isSubscribed, setIsSubscribed] = useState(false);
+  const [checked, setChecked] = useState(true);
 
-    const handleChange = event => {
-      if (event.target.checked) {
-        //как написать что это true?
-          console.log('✅ Checkbox is checked');
-      } else {
-        console.log('⛔️ Checkbox is NOT checked');
-      }
-      setIsSubscribed(current => !current);
-    };
-
-
-
-    const initialState = {
-      items : 0,
-      isTikining: false
-      }
-      
-
-    function reduser (state, action) {
-      switch (action.type) {
-         case 'sum': return{ ...state,isTikining: true }; 
-       default: return state;
-      }
-    }, result = isSubscribed.reduce((sum, next) => sum && next.status, true);
-
-    
-    
-
+   
+   
   return (
-
-    const [state, dispatch] = useReducer [reduser, {count: 0}]
-
-
-<div>
-<button type="button" class="btn btn-outline-light text-center mx-auto" onClick={ handlClick }>Рассчитай свой вариант</button>
+<div class="d-grid gap-2 col-6 mx-auto m-4 ">
+<button class="btn btn-outline-light text-center" type="button"  onClick={ handlClick }>Рассчитай свой вариант</button>
 {show && dataPlus.map ((element => {
-      const {id,  service, price } = element;
-           return (     
-            
-            <Modal>           
-            <ModalBody>
-           <Form>
-           <FormGroup controlId='fromBasicKvadrat'>
-              <FormGroup controlId='fromBasicCheckbox' className='mt-2'>
-               <FormCheck disabled={!isSubscribed} type='checkbox' label= {id.service.price} input
-                  value={isSubscribed}
-                  onChange={handleChange} />
-                            <div key={id}> 
-                        <div>
-                          <h3>{service}</h3>
-                        <h4>{price} ₽/м2</h4>
-                        </div>
-                    </div>
-                    </FormGroup>
-                   
-        <FormLabel>Сколько квадратных метров ваш объект?</FormLabel>
-<FormControl type='text' placeholder='введите цифру или цифру с запятой: 28 или 28,9'/>
-<FormText className='text-muted' ></FormText>
-</FormGroup>
+      const {id,service, price } = element;
+           
+      return (     
+      
+           <FormGroup key={id} class="mt-2" controlId='fromBasicKvadrat'>
+           <FormCheck  type='checkbox' checked={checked} onChange={() => setChecked(!checked)} 
+            /> 
+            <h4> {service} { price} ₽/м2</h4> 
+          </FormGroup>
+          
 
+        )
+// здесь должен быть инпут, куда пользователь вводит кол-во кв местров. При вставке, 
+//получается данный элекмент под каждым чек боксом, так не должно быть. куда вставить элемент ниже? 
+    
+// <FormGroup>
+//   <h4>Сколько квадратных метров ваш объект?</h4>
+// <FormControl type='text' placeholder='введите цифру или цифру с запятой: 28 или 28,9'></FormControl>
+// <FormText className='text-muted' ></FormText>
+// </FormGroup> 
 
-<div>
-<button onClick={() => dispatch ({type: 'sum'})}  type="button" class="btn btn-outline-dark m-2" >Рассчитать</button>
-<button type="button" class="btn btn-outline-dark m-2 ">Очистить</button>
- </div>
+// Тут должна быть кнопка "Узнать стоимость" - эта кнопка складывает выделенные пользователем элементы. 
 
- <FormGroup>
-  <FormLabel>Результат расчета:</FormLabel>
-<FormControl type='text' placeholder=''/>
-<FormText className='text-muted' >{state.count}</FormText>
-   </FormGroup>
+// но есть нюанс - есть позиции, которые единоразовые или % , я их определила в dataOne.
 
-        </Form>
-        </ModalBody>
-          </Modal> 
-           )
-
-           }))}
+  }))}
   </div>
 )
 }
 
 export default Price;
 
+
+// {/* <FormLabel>Сколько квадратных метров ваш объект?</FormLabel>
+// <FormControl type='text' placeholder='введите цифру или цифру с запятой: 28 или 28,9'/>
+// <FormText className='text-muted' ></FormText>
+
+// <div>
+// <button  type="button" class="btn btn-outline-dark m-2"> Рассчитать</button>
+// <button type="button" class="btn btn-outline-dark m-2 "> Очистить</button>
+//  </div>
+
+//  <FormGroup>
+//   <FormLabel>Результат расчета:</FormLabel>
+// <FormControl type='text' placeholder=''/>
+// <FormText className='text-muted' ></FormText>
+//    </FormGroup> */}
 
 
 /* <div key={id}> 
